@@ -12,5 +12,8 @@ int itc_rev_num(long long number);
 int itc_null_count(long long number);
 bool itc_mirror_num(long long number);
 int itc_mirror_cout(long long number);
+int itc_second_max_num(long long number);
+long long itc_bin_num(long long number);
+long long itc_oct_num(long long number);
 
 #endif // MIDDLE_H_INCLUDED

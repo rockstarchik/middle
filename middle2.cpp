@@ -1,54 +1,56 @@
- int itc_min_num(long long number){
- int mi, n;
- mi=9;
- while(number > 0){
-    n=number%10;
-    if (n<mi)
-        mi=n;
-    number=number/10;
- }
- return mi;
-        }
+#include "middle2.h"
+using namespace std;
 
-int itc_rev_num(long long number){
-        int rev;
-        rev=0;
-        while (number > 0){
-            rev=rev*10 + number%10;
-        number=number/10;
-}
-        return rev;
-        }
-
-int itc_null_count(long long number){
-int null;
-null=0;
-while(number > 0){
-    if (number%10 == 0)
-      null=null+1;
-    number=number/10;
-}
-return null;
+int itc_second_max_num(long long number) {
+    int m, n, p;
+    m = 0;
+    p = 0;
+    if (number < 10)
+        return -1;
+    else
+    while (number > 0) {
+        n = number % 10;
+        if (n > m)
+            m = n;
+        number = number / 10;
+    }
+    while (number > 0) {
+        n = number % 10;
+        if (n > p && p < m)
+            p = n;
+        number = number / 10;
+    }
+    return p;
 }
 
-bool itc_mirror_num(long long number){
-int mir,nal;
-nal=number;
-mir=0;
-while(number > 0){
-    mir=number%10+mir*10;
-    number=number/10;
-}
-if (mir==nal)
-    return 1;
-return 0;
+long long itc_bin_num(long long number) {
+    int bin, rev;
+    bin = 0;
+    rev = 0;
+    while (number > 1) {
+        bin = bin*10 + number % 2;
+        number = number / 2;
+    }
+    while (bin > 0) {
+        rev = rev * 10 + bin % 10;
+        bin = bin / 10;
+    }
+    return rev;
 }
 
-int itc_mirror_cout(long long number){
-int kol,i;
-kol=0;
-for(i=1;i<=number;i++)
-if (itc_mirror_num(number) )
-    kol=kol+1;
- return kol;
+long long itc_oct_num(long long number) {
+    int oct, rev;
+    oct = 0;
+    rev = 0;
+    while (number > 7) {
+        oct = oct * 10 + number % 8;
+        number = number / 8;
+    }
+    while (oct > 0) {
+        rev = rev * 10 + oct % 10;
+        oct = oct / 10;
+    }
+    return rev;
 }
+
+

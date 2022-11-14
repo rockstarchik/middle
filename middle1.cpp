@@ -42,7 +42,7 @@ long long itc_multi_num(long long number) {
         number = number * (-1);
     }
     while (number > 0) {
-        pro = pro * number % 10;
+        pro = pro * (number % 10);
         number = number / 10;
     }
     return pro;

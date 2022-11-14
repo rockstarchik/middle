@@ -16,4 +16,4 @@ int itc_second_max_num(long long number);
 long long itc_bin_num(long long number);
 long long itc_oct_num(long long number);
 
-#endif // MIDDLE_H_INCLUDED
+#endif // MIDDLE_H_INCLUDED#pragma once

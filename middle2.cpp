@@ -2,8 +2,8 @@
 using namespace std;
 
 int itc_min_num(long long number) {
-    int mi, n;
-    mi = 9;
+    int mi;
+    mi = 10;
     if (number < 0) {
         number = number * (-1);
     }
@@ -11,9 +11,9 @@ int itc_min_num(long long number) {
         return 0;
     }
     while (number > 0) {
-        n = number % 10;
-        if (n < mi)
-            mi = n;
+        if (number % 10 < mi) {
+            mi = number % 10;
+        }
         number = number / 10;
     }
     return mi;
@@ -35,6 +35,9 @@ int itc_rev_num(long long number) {
 int itc_null_count(long long number) {
     int null;
     null = 0;
+    if (number == 0) {
+        return 1;
+    }
     if (number < 0) {
         number = number * (-1);
     }
@@ -60,10 +63,12 @@ bool itc_mirror_num(long long number) {
 }
 
 int itc_mirror_cout(long long number) {
-    int kol, i;
-    kol = 0;
-    for (i = 1; i <= number; i++)
-        if (itc_mirror_num(number))
-            kol = kol + 1;
-    return kol;
+    int a;
+    a = 0;
+    for (long long i = 1, i <= number; ++i) {
+        if (i == itc_mirror_num(i)) {
+            a++
+        }
+    }
+    return a;
 }

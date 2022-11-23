@@ -65,7 +65,7 @@ bool itc_mirror_num(long long number) {
 int itc_mirror_cout(long long number) {
     int a;
     a = 0;
-    for (long long i = 1, i <= number, ++i) {
+    for (long long i = 1; i <= number; ++i) {
         if (i == itc_mirror_num(i)) {
             a++
         }

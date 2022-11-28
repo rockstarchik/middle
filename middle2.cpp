@@ -19,17 +19,18 @@ int itc_min_num(long long number) {
     return mi;
 }
 
-int itc_rev_num(long long number) {
-    int rev;
+int itc_rev_num (long long number) {
+    int rev, a;
     rev = 0;
-    if (number < 0) {
+    a = 0;
+    if (number < 0) 
         number = number * (-1);
-    }
     while (number > 0) {
-        rev = rev * 10 + number % 10;
-        number = number / 10;
+         rev = rev * 10 + number % 10;
+         number = number / 10;
     }
-    return rev;
+    a = itc_len_num(rev);
+    return a;
 }
 
 int itc_null_count(long long number) {

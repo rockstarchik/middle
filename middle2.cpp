@@ -73,7 +73,7 @@ bool itc_mirror_num(long long number) {
     return 0;
 }
 
-int itc_mirror_cout(long long number) {
+int itc_mirror_count(long long number) {
     int a;
     a = 0;
     for (long long i = 1; i <= number; ++i) {

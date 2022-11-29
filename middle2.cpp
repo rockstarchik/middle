@@ -75,18 +75,7 @@ bool itc_mirror_num(long long number) {
 
 
 int itc_mirror_count(long long number) {
-    int o = 0;
-    for (long long i = 1; i <= number; ++i) {
-        if (i == itc_mirror_num(i)) {
-            o++;
-        }
-    }
-    return o;
-}
-
-int itc_mirror_count2(long long number) {
-    int a;
-    a = 0;
+    int a = 0;
     for (long long i = 1; i <= number; ++i) {
         if (i == itc_mirror_num(i)) {
             a++;
@@ -94,5 +83,6 @@ int itc_mirror_count2(long long number) {
     }
     return a;
 }
+
 
 

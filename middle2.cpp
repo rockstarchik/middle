@@ -79,7 +79,7 @@ int itc_mirror_count(long long number) {
     if (number < 0)
         number = number * (-1);
     for (long long i = 1; i <= number; ++i) {
-        if (i == itc_mirror_num(i)) {
+        if (1 == itc_mirror_num(i)) {
             a++;
         }
     }
